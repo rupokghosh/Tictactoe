@@ -8,30 +8,29 @@
     <script src="index.js" defer></script>
 </head>
 <body class="flex-col justify-center">
-    <div class="bg-slate-500 flex justify-start py-10 pl-8 text-4xl font-bold">
+    <div class="bg-sky-200 mb-6 flex justify-start py-10 pl-8 text-4xl font-bold">
         <h2>Tic Tac Toe</h2>
     </div>
     <div id="body" class="flex flex-col gap-6 h-screen items-center">
 
-        <div id="playerChoose" class="  bg-slate-400 rounded-lg border border-r-2 flex justify-center gap-80 text-5xl m-6 py-8 hover:bg-stone-500 w-[50vw]">
+        <div id="playerChoose" class="  bg-sky-100 rounded-lg border-2 border-gray-950 shadow- flex justify-center gap-80 text-5xl m-6 py-8 hover:bg-blue-300 w-[50vw]">
             <div class="hover:cursor-pointer">X</div>
             <div>|</div>
             <div class="hover:cursor-pointer">O</div>
         </div>
-        <div id="gameGrid" class = "  rounded-xl grid grid-cols-3 grid-rows-3 bg-slate-300 gap-2 text-white h-[50vh] w-[50vw]">
-            <div class="gridChild bg-gray-900">X</div>
-            <div class="gridChild bg-gray-900">X</div>
-            <div class="gridChild bg-gray-900">X</div>
-            <div class="gridChild bg-gray-900">X</div>
-            <div class="gridChild bg-gray-900">X</div>
-            <div class="gridChild bg-gray-900">X</div>
-            <div class="gridChild bg-gray-900">X</div>
-            <div class="gridChild bg-gray-900">X</div>
-            <div class="gridChild bg-gray-900">X</div>
+        <div id="gameGrid" class = " rounded-md border-4 border-slate-800 grid grid-cols-3 grid-rows-3 bg-slate-800 gap-1 text-white text-8xl h-[50vh] w-[50vw]">
+            <div class="gridChild bg-sky-900 flex justify-center items-center">X</div>
+            <div class="gridChild bg-sky-900 flex justify-center items-center">X</div>
+            <div class="gridChild bg-sky-900 flex justify-center items-center">X</div>
+            <div class="gridChild bg-sky-900 flex justify-center items-center">X</div>
+            <div class="gridChild bg-sky-900 flex justify-center items-center">X</div>
+            <div class="gridChild bg-sky-900 flex justify-center items-center">X</div>
+            <div class="gridChild bg-sky-900 flex justify-center items-center">X</div>
+            <div class="gridChild bg-sky-900 flex justify-center items-center">X</div>
+            <div class="gridChild bg-sky-900 flex justify-center items-center">X</div>
         </div>
         
-        <button class="bg-slate-950 text-white rounded-xl hover:bg-slate-400 border border-gray-200">Restart</button>
-
+        <button type="button" class=" bg-sky-100 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-6 py-4 text-center mr-2 mb-2 mt-6 dark:border-gray-600 dark:text-gray-400 dark:focus:ring-gray-800">Restart</button>
     </div>
     <div class="footer">
 
