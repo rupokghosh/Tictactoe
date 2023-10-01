@@ -7,16 +7,19 @@
     <link rel="stylesheet" href="/dist/output.css">
     <script src="index.js" defer></script>
 </head>
-<body class="flex-col justify-center">
-    <div class="bg-sky-200 mb-6 flex justify-start py-10 pl-8 text-4xl font-bold">
+<body class="flex-col justify-center font-mono">
+
+    <div id="header" class="bg-sky-200 mb-6 flex justify-start py-10 pl-8 text-4xl font-bold font-youngSerif">
         <h2>Tic Tac Toe</h2>
     </div>
-    <div id="body" class="flex flex-col gap-6 items-center">
+
+    <div id="gridBody" class="flex flex-col gap-6 items-center">
 
         <div id="playerChoose" class="flex justify-center items-center gap-20 text-4xl m-4 py-8 w-[50vw] ">
            <button class="rounded-2xl border-2 py-4 px-32 bg-sky-100 border-sky-500 hover:bg-sky-600">X</button>
            <button class="rounded-2xl border-2 py-4 px-32 bg-sky-100 border-sky-500 hover:bg-sky-600">O</button>
         </div>
+
         <div id="gameGrid" class = " rounded-md border-4 border-sky-300 grid grid-cols-3 grid-rows-3 bg-sky-300 gap-1 text-white text-8xl h-[50vh] w-[50vw]">
             <div class="gridChild bg-sky-900 flex justify-center items-center"></div>
             <div class="gridChild bg-sky-900 flex justify-center items-center"></div>
@@ -29,12 +32,15 @@
             <div class="gridChild bg-sky-900 flex justify-center items-center"></div>
         </div>
         
-        <button type="button" class=" bg-sky-100 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-6 py-4 text-center mr-2 mb-2 mt-6 dark:border-gray-600 dark:text-gray-400 dark:focus:ring-gray-800">Restart</button>
+        <button type="button" class=" bg-sky-100 hover:text-white border border-gray-800 hover:bg-gray-900 font-medium rounded-lg text-sm px-6 py-4 text-center mr-2 mb-2 mt-6 dark:border-gray-600 dark:text-gray-400 ">Restart</button>
     </div>
-    <div class="footer flex justify-center gap-40 my-8 bg-sky-100 mx-40 rounded-lg border-2 border-sky-500 py-6">
+
+    <div id="winner">
+        
+    </div>
+    <div id="footer" class="flex justify-center gap-40 my-8 bg-sky-100 mx-40 rounded-lg border-2 border-sky-500 py-6">
         <div> © Rupok Ghosh Adin</div>
         <div class="hover:underline"><a  href="https://github.com/rupokghosh/Tictactoe">Source code</a></div>
-
     </div>
 </body>
 </html>
