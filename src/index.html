@@ -8,11 +8,29 @@
     <script src="index.js" defer></script>
 </head>
 <body class="flex-col justify-center">
-    <div class="header bg-gray-500 h-1/5">
+    <div class="bg-slate-500 flex justify-start py-10 pl-8 text-4xl font-bold">
         <h2>Tic Tac Toe</h2>
-
     </div>
-    <div class="body">
+    <div id="body" class="flex flex-col gap-6 h-screen items-center">
+
+        <div id="playerChoose" class="  bg-slate-400 rounded-lg border border-r-2 flex justify-center gap-80 text-5xl m-6 py-8 hover:bg-stone-500 w-[50vw]">
+            <div class="hover:cursor-pointer">X</div>
+            <div>|</div>
+            <div class="hover:cursor-pointer">O</div>
+        </div>
+        <div id="gameGrid" class = "  rounded-xl grid grid-cols-3 grid-rows-3 bg-slate-300 gap-2 text-white h-[50vh] w-[50vw]">
+            <div class="gridChild bg-gray-900">X</div>
+            <div class="gridChild bg-gray-900">X</div>
+            <div class="gridChild bg-gray-900">X</div>
+            <div class="gridChild bg-gray-900">X</div>
+            <div class="gridChild bg-gray-900">X</div>
+            <div class="gridChild bg-gray-900">X</div>
+            <div class="gridChild bg-gray-900">X</div>
+            <div class="gridChild bg-gray-900">X</div>
+            <div class="gridChild bg-gray-900">X</div>
+        </div>
+        
+        <button class="bg-slate-950 text-white rounded-xl hover:bg-slate-400 border border-gray-200">Restart</button>
 
     </div>
     <div class="footer">
