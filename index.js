@@ -1,30 +1,55 @@
 //global variables
 const grids = document.querySelectorAll('.gridChild');
-const XBtn = document.getElementById('XBtn');
-const OBtn = document.getElementById('OBtn');
+const XBtn = document.getElementById("XBtn");
+const OBtn = document.getElementById("OBtn");
+const choiceBtn = document.querySelectorAll('.choiceBtn');
 const restartBtn = document.getElementById('restartBtn');
 const declareWinner = document.getElementById('winner');
+let gameOver = false;
 
 // player objects
 
-const player1 = {
-
-}
-const player2 = {
-
-}
-
-// functions
+let currentPlayer = 'X';
+// create functions
 
 function clearGrid(){
 
     grids.forEach((grid) => {
         grid.textContent = '';
     });
+    gameOver = false;expl
 }
 
-//calling functions
+function chooseXorO(choice){
+    if(!gameOver){
+        currentPlayer = choice;
+        XBtn.disabled = true;
+        OBtn.disabled = true;
+    }
+
+}
+
+function switchPlayer(){
+
+    currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+}
+
+function checkWinner(){
+
+}
+
+function displayWinner(){
+
+}
+
+// calling functions
 
 restartBtn.addEventListener('click', () => {
     clearGrid();
+
 });
+
+XBtn.addEventListener('click', () => chooseXorO('X'));
+OBtn.addEventListener('click', () => chooseXorO('O'));
+
+console.log(currentPlayer);
