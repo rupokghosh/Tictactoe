@@ -49,7 +49,23 @@ restartBtn.addEventListener('click', () => {
 
 });
 
+// callback chooseXorO()
+
 XBtn.addEventListener('click', () => chooseXorO('X'));
 OBtn.addEventListener('click', () => chooseXorO('O'));
 
 console.log(currentPlayer);
+
+// click on gameBoard to display X or O
+
+grids.forEach((grid) =>{
+
+    if(!gameOver && !grid.textContent){
+        grid.addEventListener('click', () => {
+            grid.textContent = currentPlayer;
+            switchPlayer();
+        });
+        
+    }
+    
+})
