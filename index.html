@@ -16,23 +16,23 @@
     <div id="gridBody" class="flex flex-col gap-6 items-center">
 
         <div id="playerChoose" class="flex justify-center items-center gap-20 text-4xl m-4 py-8 w-[50vw] ">
-           <button class="rounded-2xl border-2 py-4 px-32 bg-sky-100 border-sky-500 hover:bg-sky-600">X</button>
-           <button class="rounded-2xl border-2 py-4 px-32 bg-sky-100 border-sky-500 hover:bg-sky-600">O</button>
+           <button id="XBtn" class="rounded-2xl border-2 py-4 px-32 bg-sky-100 border-sky-500 hover:bg-sky-600">X</button>
+           <button id="OBtn" class="rounded-2xl border-2 py-4 px-32 bg-sky-100 border-sky-500 hover:bg-sky-600">O</button>
         </div>
 
         <div id="gameGrid" class = " rounded-md border-4 border-sky-300 grid grid-cols-3 grid-rows-3 bg-sky-300 gap-1 text-white text-8xl h-[50vh] w-[50vw]">
-            <div class="gridChild bg-sky-900 flex justify-center items-center"></div>
-            <div class="gridChild bg-sky-900 flex justify-center items-center"></div>
-            <div class="gridChild bg-sky-900 flex justify-center items-center"></div>
-            <div class="gridChild bg-sky-900 flex justify-center items-center"></div>
-            <div class="gridChild bg-sky-900 flex justify-center items-center"></div>
-            <div class="gridChild bg-sky-900 flex justify-center items-center"></div>
-            <div class="gridChild bg-sky-900 flex justify-center items-center"></div>
-            <div class="gridChild bg-sky-900 flex justify-center items-center"></div>
-            <div class="gridChild bg-sky-900 flex justify-center items-center"></div>
+            <div class="gridChild bg-sky-900 flex justify-center items-center cell-1"></div>
+            <div class="gridChild bg-sky-900 flex justify-center items-center cell-2"></div>
+            <div class="gridChild bg-sky-900 flex justify-center items-center cell-3"></div>
+            <div class="gridChild bg-sky-900 flex justify-center items-center cell-4"></div>
+            <div class="gridChild bg-sky-900 flex justify-center items-center cell-5"></div>
+            <div class="gridChild bg-sky-900 flex justify-center items-center cell-6"></div>
+            <div class="gridChild bg-sky-900 flex justify-center items-center cell-7"></div>
+            <div class="gridChild bg-sky-900 flex justify-center items-center cell-8"></div>
+            <div class="gridChild bg-sky-900 flex justify-center items-center cell-9"></div>
         </div>
         
-        <button type="button" class=" bg-sky-100 hover:text-white border border-gray-800 hover:bg-gray-900 font-medium rounded-lg text-sm px-6 py-4 text-center mr-2 mb-2 mt-6 dark:border-gray-600 dark:text-gray-400 ">Restart</button>
+        <button id="restartBtn" type="button" class=" bg-sky-100 hover:text-white border border-gray-800 hover:bg-gray-900 font-medium rounded-lg text-sm px-6 py-4 text-center mr-2 mb-2 mt-6 dark:border-gray-600 dark:text-gray-400 ">Restart</button>
     </div>
 
     <div id="winner">
