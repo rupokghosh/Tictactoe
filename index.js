@@ -35,6 +35,10 @@ function switchPlayer(){
 }
 
 function checkWinner(){
+    const winningCombos = [[0, 1, 2], [3, 4, 5], [6, 7, 8], // rows
+                           [0 ,3 ,6], [1 ,4 ,7], [2 ,5 ,8], // column
+                           [0 ,4 ,8], [2, 4, 6]             // diagonals
+                        ];
 
 }
 
@@ -51,8 +55,12 @@ restartBtn.addEventListener('click', () => {
 
 // callback chooseXorO()
 
-XBtn.addEventListener('click', () => chooseXorO('X'));
-OBtn.addEventListener('click', () => chooseXorO('O'));
+XBtn.addEventListener('click', () => {
+    chooseXorO('X');
+});
+OBtn.addEventListener('click', () => {
+    chooseXorO('O');
+});
 
 console.log(currentPlayer);
 
@@ -60,12 +68,14 @@ console.log(currentPlayer);
 
 grids.forEach((grid) =>{
 
-    if(!gameOver && !grid.textContent){
+    if(!gameOver && !grid.textContent && !grid.classList.contains('marked')){
         grid.addEventListener('click', () => {
             grid.textContent = currentPlayer;
+            grid.classList.add('marked');
             switchPlayer();
+            checkWinner();
         });
-        
+            
     }
     
 })
