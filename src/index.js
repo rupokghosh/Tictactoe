@@ -18,6 +18,10 @@ function clearGrid(){
         grid.textContent = '';
     });
     gameOver = false;
+
+    grids.forEach((grid) => {                   // remove 'marked' class from all the grids 
+        grid.classList.remove('marked');
+    })
 }
 
 function chooseXorO(choice){
@@ -55,7 +59,7 @@ function checkWinner(){
             }, 500);
             setTimeout(() => {
                 declareWinner.textContent = '';
-            }, 1000);
+            }, 3000);
         }
     });
 
@@ -67,7 +71,6 @@ function checkWinner(){
 restartBtn.addEventListener('click', () => {
     clearGrid();
     declareWinner.textContent = '';
-
 });
 
 // callback chooseXorO()
@@ -83,16 +86,15 @@ console.log(currentPlayer);
 
 // click on gameBoard to display X or O
 
-grids.forEach((grid) =>{
+grids.forEach((grid) => {
 
-    if(!gameOver && !grid.textContent && !grid.classList.contains('marked')){
-        grid.addEventListener('click', () => {
+    grid.addEventListener('click', () => {
+        if (!gameOver && !grid.textContent && !grid.classList.contains('marked')) {
             grid.classList.add('marked');
             grid.textContent = currentPlayer;
             switchPlayer();
             checkWinner();
-        });
-            
-    }
+        }
+    });
 });
 
