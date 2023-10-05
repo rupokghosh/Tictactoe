@@ -48,17 +48,18 @@ function checkWinner(){
         if (cellA && cellA === cellB && cellA === cellC) {
             gameOver = true;
             setTimeout(() => {
-            displayWinner();
-            clearGrid();
+                declareWinner.textContent = `The winnner is ${cellA}`;
             }, 100);
+            setTimeout(() => {
+                clearGrid();
+            }, 500);
+            setTimeout(() => {
+                declareWinner.textContent = '';
+            }, 1000);
         }
     });
 
 
-}
-
-function displayWinner(){
-    declareWinner.textContent = `The winner is ${currentPlayer}`;
 }
 
 // calling functions
