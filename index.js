@@ -92,5 +92,5 @@ grids.forEach((grid) =>{
         });
             
     }
-    
-})
+});
+
