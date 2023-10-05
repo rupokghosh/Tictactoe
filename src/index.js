@@ -1,4 +1,5 @@
 //global variables
+
 const grids = document.querySelectorAll('.gridChild');
 const XBtn = document.getElementById("XBtn");
 const OBtn = document.getElementById("OBtn");
@@ -10,6 +11,7 @@ let gameOver = false;
 // player objects
 
 let currentPlayer = 'X';
+
 // create functions
 
 function clearGrid(){
@@ -43,7 +45,10 @@ function checkWinner(){
                            [0 ,3 ,6], [1 ,4 ,7], [2 ,5 ,8], // column
                            [0 ,4 ,8], [2, 4, 6]             // diagonals
                                                 ];
-    winningCombos.forEach(combo => {
+          
+        // logic to check for winning patterns
+
+        winningCombos.forEach(combo => {
         const [a, b, c] = combo;
         const cellA = grids[a].textContent;
         const cellB = grids[b].textContent;
@@ -89,7 +94,7 @@ console.log(currentPlayer);
 grids.forEach((grid) => {
 
     grid.addEventListener('click', () => {
-        if (!gameOver && !grid.textContent && !grid.classList.contains('marked')) {
+        if (!gameOver && !grid.textContent && !grid.classList.contains('marked')) {     // logic to only let player tap if cell empty
             grid.classList.add('marked');
             grid.textContent = currentPlayer;
             switchPlayer();
