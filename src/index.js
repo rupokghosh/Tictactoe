@@ -65,6 +65,7 @@ function displayWinner(){
 
 restartBtn.addEventListener('click', () => {
     clearGrid();
+    declareWinner.textContent = '';
 
 });
 
